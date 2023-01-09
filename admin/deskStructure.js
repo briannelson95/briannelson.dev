@@ -1,4 +1,4 @@
-import { ControlsIcon, HomeIcon, DocumentsIcon, CogIcon, CodeBlockIcon, MenuIcon } from '@sanity/icons'
+import { ControlsIcon, HomeIcon, DocumentsIcon, CogIcon, CodeBlockIcon, MenuIcon, ImagesIcon } from '@sanity/icons'
 
 export const myStructure = (S) => 
     S.list()
@@ -38,6 +38,14 @@ export const myStructure = (S) =>
                 )
                 .icon(ControlsIcon),
             S.divider(),
+            // S.listItem()
+            //     .title('Media Libray')
+            //     .child(
+            //         S.document()
+            //             .schemaType('media')
+            //             .documentId('media')
+            //         )
+            //         .icon(ImagesIcon),        
             S.listItem()
                 .title('Pages')
                 .child(
@@ -58,6 +66,6 @@ export const myStructure = (S) =>
                 .icon(DocumentsIcon),
             S.divider(),
             ...S.documentTypeListItems().filter(
-                (listItem) => !['siteSettings', 'metadata', 'navigation', 'pages', 'homepage'].includes(listItem.getId())
+                (listItem) => !['siteSettings', 'metadata', 'navigation', 'pages', 'homepage',].includes(listItem.getId())
             )
         ])

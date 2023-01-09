@@ -1,24 +1,13 @@
 import { defineField, defineType } from "sanity";
 
-export const pages = defineType({
-    name: 'pages',
-    title: 'Pages',
+export const projects = defineType({
+    name: 'projects',
+    title: 'Projects',
     type: 'document',
-    fieldsets: [
-        {
-            name: 'seo',
-            title: 'Metadata & SEO',
-            description: 'Use these fields to override the default metadata',
-            options: {
-                collapsible: true,
-                collapsed: true,
-            }
-        }
-    ],
     fields: [
         defineField({
             name: 'title',
-            title: 'Title',
+            title: 'Project Title',
             type: 'string',
         }),
         defineField({
@@ -33,12 +22,15 @@ export const pages = defineType({
         defineField({
             name: 'body',
             title: 'Body',
-            type: 'blockContent'
+            type: 'blockContent',
         }),
         defineField({
-            name: 'seo',
-            type: 'seo',
-            fieldset: 'seo'
+            name: 'image',
+            title: 'Main Image',
+            type: 'reference',
+            to: {
+                type: 'media'
+            }
         })
-    ],
+    ]
 })
