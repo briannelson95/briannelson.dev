@@ -10,6 +10,7 @@ import siteSettings from "./documents/siteSettings";
 import blockContent from "./objects/blockContent";
 import contact from "./objects/contact";
 import { seo } from "./objects/seo";
+import { stats } from "./objects/stats";
 
 export const schemaTypes = [
     pages,
@@ -24,4 +25,5 @@ export const schemaTypes = [
     mediaLibrary,
     projects,
     categories,
+    stats,
 ]

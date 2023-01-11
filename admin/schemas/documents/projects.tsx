@@ -95,7 +95,17 @@ export const projects = defineType({
                     ]
                 }
             ]
-        })
+        }),
+        defineField({
+            name: 'stats',
+            title: 'Statistics',
+            type: 'array',
+            of: [
+                {
+                    type: 'stats',
+                }
+            ]
+        }),
     ],
     preview: {
         select: {
