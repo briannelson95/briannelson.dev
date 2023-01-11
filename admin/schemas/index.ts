@@ -1,5 +1,5 @@
 import blogs from "./documents/blogs";
-import category from "./documents/category";
+import { categories } from "./documents/categories";
 import homepage from "./documents/homepage";
 import { mediaLibrary } from "./documents/mediaLibrary";
 import metadata from "./documents/metadata";
@@ -19,9 +19,9 @@ export const schemaTypes = [
     metadata,
     navigation,
     blogs,
-    category,
     blockContent,
     seo,
     mediaLibrary,
-    projects
+    projects,
+    categories,
 ]

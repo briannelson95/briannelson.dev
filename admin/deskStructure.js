@@ -66,6 +66,6 @@ export const myStructure = (S) =>
                 .icon(DocumentsIcon),
             S.divider(),
             ...S.documentTypeListItems().filter(
-                (listItem) => !['siteSettings', 'metadata', 'navigation', 'pages', 'homepage',].includes(listItem.getId())
+                (listItem) => !['siteSettings', 'metadata', 'navigation', 'pages', 'homepage', 'categories'].includes(listItem.getId())
             )
         ])

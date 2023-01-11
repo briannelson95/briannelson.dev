@@ -1,35 +1,42 @@
 import { defineField, defineType } from "sanity";
-import {Stack, Text, Card, } from '@sanity/ui'
+import {Stack, Card, Flex } from '@sanity/ui'
+import { RocketIcon } from '@sanity/icons'
 
 function MyPreviewComponent(props: any) {
-    const {description, title, image, ...restProps} = props
+    const {title, url} = props
+  
     return (
+      <Flex align="center" justify="center" height="fill">
         <Card border padding={3}>
-            <Stack space={3} marginBottom={3}>
-                <img src={image} />
-                <Text size={1} weight="bold">
-                {title?.toUpperCase()}
-                </Text>
-                {description && (
-                <Text size={1} style={{color: 'green'}}>
-                    {description}
-                </Text>
-                )}
-            </Stack>
-            {props.renderDefault(restProps)}
+          <Stack space={3} marginBottom={3}>
+            <img src={url} alt={title} style={{width: '100%'}} />
+          </Stack>
         </Card>
+      </Flex>
     )
-}
+  }
 
 export const projects = defineType({
     name: 'projects',
     title: 'Projects',
     type: 'document',
+    icon: RocketIcon,
+    fieldsets: [
+        {
+            name: 'title',
+            title: 'Title'
+        },
+        {
+            name: 'projectLinks',
+            title: 'Project Links'
+        }
+    ],
     fields: [
         defineField({
             name: 'title',
             title: 'Project Title',
             type: 'string',
+            fieldset: 'title'
         }),
         defineField({
             name: 'slug',
@@ -38,7 +45,15 @@ export const projects = defineType({
             options: {
                 source: 'title',
                 maxLength: 96
-            }
+            },
+            fieldset: 'title'
+        }),
+        defineField({
+            name: 'featured',
+            title: 'Featured',
+            type: 'boolean',
+            initialValue: false,
+            fieldset: 'title'
         }),
         defineField({
             name: 'body',
@@ -55,6 +70,37 @@ export const projects = defineType({
                     preview: MyPreviewComponent
                 }
             },
+        }),
+        defineField({
+            name: 'link',
+            title: 'Link to Project',
+            type: 'url',
+            fieldset: 'projectLinks'
+        }),
+        defineField({
+            name: 'github',
+            title: 'GitHub Reop',
+            type: 'url',
+            fieldset: 'projectLinks'
+        }),
+        defineField({
+            name: 'tags',
+            title: 'Tags',
+            type: 'array',
+            of: [
+                {
+                    type: 'reference',
+                    to: [
+                        {type: 'categories'}
+                    ]
+                }
+            ]
         })
-    ]
+    ],
+    preview: {
+        select: {
+            title: 'title',
+            media: 'image'
+        }
+    }
 })

@@ -1,12 +1,16 @@
+import {ComposeIcon} from '@sanity/icons'
+
 export default {
     name: 'blogs',
     title: 'Blogs',
     type: 'document',
+    icon: ComposeIcon,
     fields: [
         {
             name: 'title',
             title: 'Title',
             type: 'string',
+            fieldset: 'title'
         },
         {
             name: 'slug',
@@ -15,7 +19,8 @@ export default {
             options: {
                 source: 'title',
                 maxLength: 96, 
-            }
+            },
+            fieldset: 'title'
         },
         {
             name: 'description',
@@ -37,7 +42,7 @@ export default {
             name: 'Categories',
             title: 'categories',
             type: 'array',
-            of: [{type: 'reference', to: {type: 'category'}}]
+            of: [{type: 'reference', to: {type: 'categories'}}]
         },
         {
             name: 'publishedAt',
@@ -51,4 +56,5 @@ export default {
         }
 
     ],
+    
 }
