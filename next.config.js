@@ -8,7 +8,9 @@ const STUDIO_REWRITE = {
 }
 
 const nextConfig = {
-  rewrites: () => [STUDIO_REWRITE],
+  async rewrites() {
+    return [STUDIO_REWRITE]
+  },
   reactStrictMode: true,
   swcMinify: true,
   images: {

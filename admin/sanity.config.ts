@@ -7,6 +7,7 @@ import { myStructure } from './deskStructure'
 export default defineConfig({
   name: 'default',
   title: 'briannelson.dev',
+  basePath: "/admin",
 
   projectId: 'etj370e2',
   dataset: 'production',

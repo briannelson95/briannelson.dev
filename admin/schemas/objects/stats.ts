@@ -18,5 +18,11 @@ export const stats = defineType({
     ],
     options: {
         columns: 2
+    },
+    preview: {
+        select: {
+            title: 'number',
+            subtitle: 'title'
+        }
     }
 })
