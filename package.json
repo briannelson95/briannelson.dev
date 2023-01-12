@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "echo 'Building Sanity to public/admin' && cd admin && sanity build && echo 'Done'",
+    "prebuild": "echo 'Building Sanity to public/admin' && cd admin && yarn build && echo 'Done'",
     "build": "next build",
     "start": "next start",
     "sanity": "cd admin && yarn dev",
