@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "echo 'Building Sanity to public/admin' && cd admin && sanity build && npx cli build public ../public/admin -y && echo 'Done'",
+    "prebuild": "echo 'Building Sanity to public/admin' && cd admin && yarn && npx @sanity/cli build ../public/admin -y && echo 'Done'",
     "build": "next build",
     "start": "next start",
-    "sanity": "cd admin && yarn dev",
+    "sanity": "cd admin && sanity build",
     "lint": "next lint"
   },
   "dependencies": {
