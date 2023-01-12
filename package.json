@@ -7,7 +7,7 @@
     "prebuild": "echo 'Building Sanity to public/admin' && cd admin && yarn && npx @sanity/cli build ../public/admin -y && echo 'Done'",
     "build": "next build",
     "start": "next start",
-    "sanity": "cd admin && sanity build",
+    "sanity": "cd admin && sanity start",
     "lint": "next lint"
   },
   "dependencies": {
