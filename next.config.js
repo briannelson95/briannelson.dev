@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const STUDIO_REWRITE = {
-  source: "/admin/:path*",
+  source: "/admin",
   destination:
     process.env.NODE_ENV === "development"
       ? "http://localhost:3333/admin/:path*"
-      : "/admin/index.html",
+      : "/admin/:path*",
 }
 
 const nextConfig = {
