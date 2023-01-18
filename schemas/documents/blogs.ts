@@ -10,7 +10,6 @@ export default {
             name: 'title',
             title: 'Title',
             type: 'string',
-            fieldset: 'title'
         },
         {
             name: 'slug',
@@ -20,7 +19,6 @@ export default {
                 source: 'title',
                 maxLength: 96, 
             },
-            fieldset: 'title'
         },
         {
             name: 'description',
