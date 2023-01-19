@@ -13,6 +13,10 @@ export const pages = defineType({
                 collapsible: true,
                 collapsed: true,
             }
+        },
+        {
+            name: 'title',
+            title: 'Page Title'
         }
     ],
     fields: [
@@ -20,6 +24,7 @@ export const pages = defineType({
             name: 'title',
             title: 'Title',
             type: 'string',
+            fieldset: 'title'
         }),
         defineField({
             name: 'slug',
@@ -28,7 +33,8 @@ export const pages = defineType({
             options: {
                 source: 'title',
                 maxLength: 96
-            }
+            },
+            fieldset: 'title'
         }),
         defineField({
             name: 'body',

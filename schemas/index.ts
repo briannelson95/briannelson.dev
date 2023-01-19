@@ -1,6 +1,6 @@
 import blogs from "./documents/blogs";
 import { categories } from "./documents/categories";
-import homepage from "./documents/homepage";
+import { homepage } from "./documents/homepage";
 import { mediaLibrary } from "./documents/mediaLibrary";
 import metadata from "./documents/metadata";
 import navigation from "./documents/navigation";
@@ -9,6 +9,7 @@ import { projects } from "./documents/projects";
 import siteSettings from "./documents/siteSettings";
 import blockContent from "./objects/blockContent";
 import contact from "./objects/contact";
+import { cta } from "./objects/cta";
 import { seo } from "./objects/seo";
 import { stats } from "./objects/stats";
 
@@ -26,4 +27,5 @@ export const schemaTypes = [
     projects,
     categories,
     stats,
+    cta
 ]
