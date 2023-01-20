@@ -27,3 +27,17 @@ export const projectList = groq`
         title
     }
 `
+
+export const singleProject = groq`
+    *[_type == 'projects' && slug.current == $slug][0]{
+        ...,
+        image->{
+            alt,
+            image
+        },
+        tags[]->{
+            name
+            
+        },
+    }
+`

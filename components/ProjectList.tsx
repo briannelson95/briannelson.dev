@@ -27,13 +27,13 @@ export default function ProjectList({ projects }: Props) {
                   alt={project.image.alt}
                   fill
                 />
-                <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-5 flex justify-between">
+                <div className="absolute bottom-0 w-full bg-opacity-30 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-5 flex justify-between">
                   <div>
                     <h3 className="font-bold">{project.title}</h3>
                   </div>
                   <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
                     {project.tags.map((category: { name: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; }, index: Key | null | undefined) => (
-                      <div key={index} className="bg-[#F7AB0A] text-center text-black px-3 py-1 rounded-full text-sm font-semibold">
+                      <div key={index} className="bg-violet-500 text-center text-white px-3 py-1 rounded-full text-sm font-semibold">
                         <p>{category.name}</p>
                       </div>
                     ))}

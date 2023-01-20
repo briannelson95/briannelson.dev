@@ -1,15 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import urlFor from '../lib/urlFor';
 
-export const RichTextComponent = {
+export const RichTextComponent: any = {
     types: {
         image: ({ value }: any) => {
             return (
                 <div className='relative w-full h-96 m-10 mx-auto'>
                     <Image 
                         className='object-contain'
-                        src={''} 
-                        alt={''}
+                        src={urlFor(value).url()} 
+                        alt={value.alt}
                         fill
                     />
                 </div>
