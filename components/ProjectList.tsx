@@ -11,6 +11,7 @@ type Props = {
 
 
 export default function ProjectList({ projects }: Props) {
+  // console.log(projects[0].slug)
   return (
     <div>
       <hr className="border-black mb-10"/>

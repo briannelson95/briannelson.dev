@@ -6,7 +6,8 @@ import ProjectList from "../../components/ProjectList";
 import PreviewProjectList from "../../components/PreviewProjectList";
 
 export default async function Home() {
-
+    const data = await client.fetch(homepage)
+    const projects = await client.fetch(projectList)
     if (previewData()) {
         return (
             <PreviewSuspense fallback={(
@@ -17,13 +18,12 @@ export default async function Home() {
                 </div>
             )}>
                 {/* PreviewProjectList */}
-                <PreviewProjectList query={homepage} />
+                <PreviewProjectList query={projectList} />
             </PreviewSuspense>
         )
     }
 
-    const data = await client.fetch(homepage)
-    const projects = await client.fetch(projectList)
+    
     // console.log(projects)
     return (
         <div>

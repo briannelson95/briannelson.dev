@@ -5,6 +5,7 @@ import {schemaTypes} from './schemas'
 import { myStructure } from './deskStructure'
 import { myTheme } from './theme'
 import StudioNavbar from './components/StudioNavbar'
+import { getDefaultDocumentNode } from './structure'
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!;
@@ -20,6 +21,7 @@ export default defineConfig({
   plugins: [
     deskTool({
       structure: myStructure,
+      defaultDocumentNode: getDefaultDocumentNode
     }), 
     visionTool()
   ],
