@@ -49,6 +49,12 @@ export const projects = defineType({
             fieldset: 'title'
         }),
         defineField({
+            name: 'description',
+            title: 'Description',
+            type: 'text',
+            rows: 5
+        }),
+        defineField({
             name: 'featured',
             title: 'Featured',
             type: 'boolean',

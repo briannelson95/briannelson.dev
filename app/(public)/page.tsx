@@ -24,6 +24,7 @@ export default async function Home() {
 
     const data = await client.fetch(homepage)
     const projects = await client.fetch(projectList)
+    // console.log(projects)
     return (
         <div>
             <h1 className='text-3xl font-bold underline'>Hello World</h1>

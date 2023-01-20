@@ -11,6 +11,9 @@ export const mediaLibrary = defineType({
           name: 'image',
           title: 'Image',
           type: 'image',
+          options: {
+            hotspot: true
+          }
         }),
         defineField({
           name: 'alt',
