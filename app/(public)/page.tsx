@@ -5,6 +5,8 @@ import PreviewSuspense from "../../components/PreviewSuspense"
 import ProjectList from "../../components/ProjectList";
 import PreviewProjectList from "../../components/PreviewProjectList";
 
+export const revalidate = 21600;
+
 export default async function Home() {
     const data = await client.fetch(homepage)
     const projects = await client.fetch(projectList)

@@ -1,4 +1,5 @@
 import { PortableText } from "@portabletext/react"
+import { groq } from "next-sanity"
 import Image from "next/image"
 import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal, Key } from "react"
 import { RichTextComponent } from "../../../../components/RichTextComponents"
@@ -10,6 +11,19 @@ type Props = {
     params: {
         slug: string
     }
+}
+
+export const revalidate = 21600;
+
+export async function generateStaticParams() {
+    const query = groq`*[_type == 'projects']{ slug }`
+
+    const slugs: any[] = await client.fetch(query)
+    const slugRoutes = slugs.map((slug) => slug.slug.current)
+
+    return slugRoutes.map(slug => ({
+        slug
+    }))
 }
 
 export default async function ProjectPage({params: {slug}}: Props) {
