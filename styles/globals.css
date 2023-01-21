@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    @apply bg-zinc-800 text-white
+  }
+}
+
 /* :root {
   --max-width: 1100px;
   --border-radius: 12px;

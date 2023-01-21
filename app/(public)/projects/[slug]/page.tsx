@@ -30,7 +30,7 @@ export default async function ProjectPage({params: {slug}}: Props) {
                         />                  
                     </div>
 
-                    <section className="p-5 bg-violet-500 w-full">
+                    <section className="p-5 bg-gradient-to-br from-pink-500 to-indigo-500 before:bg-gradient-to-br before:from-pink-500 before:to-indigo-500 w-full">
                         <div className="flex flex-col md:flex-row justify-between gap-y-5">
                             <div>
                                 <h1 className="text-4xl font-extrabold">{project.title}</h1>

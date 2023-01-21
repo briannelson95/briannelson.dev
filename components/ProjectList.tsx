@@ -3,6 +3,7 @@ import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal, Key } 
 import urlFor from "../lib/urlFor";
 import {ArrowRightIcon} from '@sanity/icons'
 import ClientSideRoute from "./ClientSideRoute";
+import { GitHub, Globe } from "react-feather";
 
 
 type Props = {
@@ -11,7 +12,7 @@ type Props = {
 
 
 export default function ProjectList({ projects }: Props) {
-  // console.log(projects[0].slug)
+  // console.log(projects[0])
   return (
     <div>
       <hr className="border-black mb-10"/>
@@ -33,7 +34,7 @@ export default function ProjectList({ projects }: Props) {
                   </div>
                   <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
                     {project.tags.map((category: { name: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; }, index: Key | null | undefined) => (
-                      <div key={index} className="bg-violet-500 text-center text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      <div key={index} className="bg-gradient-to-br from-pink-500 to-indigo-500 before:bg-gradient-to-br before:from-pink-500 before:to-indigo-500 text-center text-white px-3 py-1 rounded-full text-sm font-semibold">
                         <p>{category.name}</p>
                       </div>
                     ))}
@@ -46,10 +47,26 @@ export default function ProjectList({ projects }: Props) {
                 <p className="line-clamp-2">{project.description}</p>
               </div> 
 
-              <p className="mt-5 font-bold flex items-center group-hover:underline">
-                Read Post
-                <ArrowRightIcon className="ml-2 h-4 w-4" />
-              </p>
+              <div className="flex justify-between align-bottom">
+                <p className="mt-5 font-bold flex items-center group-hover:underline">
+                  Read Post
+                  <ArrowRightIcon className="ml-2 h-4 w-4" />
+                </p>
+                
+                <div className="mt-5 font-bold flex items-center">
+                  {project.github 
+                    ? <a href={project.github} target="_blank" rel="noreferrer"><GitHub className="h-6 w-6 mx-1" /></a>
+                    : ''
+                  }
+                  {project.link 
+                    ? <a href={project.link} target="_blank" rel="noreferrer"><Globe className="h-6 w-6 mx-1" /></a>
+                    : ''
+                  }
+                </div>
+
+              </div>
+
+              
             </div>
           </ClientSideRoute>
         ))}
