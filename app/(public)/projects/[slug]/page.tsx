@@ -13,7 +13,7 @@ type Props = {
     }
 }
 
-export const revalidate = 21600;
+export const revalidate = 60;
 
 export async function generateStaticParams() {
     const query = groq`*[_type == 'projects']{ slug }`
