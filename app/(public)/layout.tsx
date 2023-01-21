@@ -1,3 +1,4 @@
+import Header from '../../components/Header'
 import Navbar from '../../components/Navbar'
 import '../../styles/globals.css'
 
@@ -10,7 +11,7 @@ export default function RootLayout({
     <html>
       <head />
       <body className='max-w-7xl mx-auto'>
-        <Navbar />
+        <Header />
         {children}
       </body>
     </html>

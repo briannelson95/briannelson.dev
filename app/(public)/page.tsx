@@ -4,6 +4,7 @@ import { client } from "../../lib/sanity.client";
 import PreviewSuspense from "../../components/PreviewSuspense"
 import ProjectList from "../../components/ProjectList";
 import PreviewProjectList from "../../components/PreviewProjectList";
+import Header from "../../components/Header";
 
 export const revalidate = 60;
 
@@ -29,7 +30,6 @@ export default async function Home() {
     // console.log(projects)
     return (
         <div>
-            <h1 className='text-3xl font-bold underline'>Hello World</h1>
             <ProjectList projects={projects} />
         </div>
     )

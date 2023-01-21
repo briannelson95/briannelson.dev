@@ -8,6 +8,24 @@
   }
 }
 
+.background-animate {
+  background-size: 200%;
+
+  -webkit-animation: AnimationName 4s ease infinite;
+  -moz-animation: AnimationName 4s ease infinite;
+  animation: AnimationName 4s ease infinite;
+}
+
+@keyframes AnimationName {
+  0%,
+  100% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+}
+
 /* :root {
   --max-width: 1100px;
   --border-radius: 12px;
