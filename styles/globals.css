@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    @apply bg-zinc-800 text-white
+    @apply dark:bg-zinc-800 dark:text-white
   }
 }
 
