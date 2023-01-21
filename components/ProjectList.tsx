@@ -33,7 +33,7 @@ export default function ProjectList({ projects }: Props) {
                     <h3 className="font-bold">{project.title}</h3>
                   </div>
                   <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
-                    {project.tags.map((category: { name: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; }, index: Key | null | undefined) => (
+                    {project.tags.splice(0,2).map((category: { name: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; }, index: Key | null | undefined) => (
                       <div key={index} className="bg-gradient-to-br from-pink-500 to-indigo-500 before:bg-gradient-to-br before:from-pink-500 before:to-indigo-500 text-center text-white px-3 py-1 rounded-full text-sm font-semibold">
                         <p>{category.name}</p>
                       </div>
