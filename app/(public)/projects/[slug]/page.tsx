@@ -7,6 +7,7 @@ import { singleProject } from "../../../../lib/queries"
 import { client } from "../../../../lib/sanity.client"
 import urlFor from "../../../../lib/urlFor"
 import { notFound } from 'next/navigation';
+import { GitHub, Globe } from "react-feather"
 
 type Props = {
     params: {
@@ -62,7 +63,26 @@ export default async function ProjectPage({params: {slug}}: Props) {
                                     })}
                                 </p>
                             </div>
-
+                            <div className="font-bold flex items-center">
+                                {project.github 
+                                    ? <a href={project.github} target="_blank" rel="noreferrer">
+                                        <div className="tooltip">
+                                            <GitHub className="h-6 w-6 mx-1 z-50" />
+                                            <span className="tooltiptext">View Repo</span>
+                                        </div>
+                                        </a>
+                                    : ''
+                                }
+                                {project.link 
+                                    ? <a href={project.link} target="_blank" rel="noreferrer">
+                                        <div className="tooltip">
+                                            <Globe className="h-6 w-6 mx-1 z-50" />
+                                            <span className="tooltiptext">Visit Website</span>
+                                        </div>
+                                        </a>
+                                    : ''
+                                }
+                            </div>
                             
                         </div>
                         <div>
