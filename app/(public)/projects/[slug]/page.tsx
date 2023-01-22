@@ -6,6 +6,7 @@ import { RichTextComponent } from "../../../../components/RichTextComponents"
 import { singleProject } from "../../../../lib/queries"
 import { client } from "../../../../lib/sanity.client"
 import urlFor from "../../../../lib/urlFor"
+import { notFound } from 'next/navigation';
 
 type Props = {
     params: {
@@ -30,6 +31,10 @@ export default async function ProjectPage({params: {slug}}: Props) {
     
     const project: any = await client.fetch(singleProject, { slug });
     // console.log(post)
+
+    if (!project) {
+        notFound();
+    }
     
     return (
         <article className="px-10 pb-28">
