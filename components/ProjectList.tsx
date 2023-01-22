@@ -61,11 +61,21 @@ export default function ProjectList({ projects }: Props) {
                   
                   <div className="mt-5 font-bold flex items-center">
                     {project.github 
-                      ? <a href={project.github} target="_blank" rel="noreferrer"><GitHub className="h-6 w-6 mx-1 z-50" /></a>
+                      ? <a href={project.github} target="_blank" rel="noreferrer">
+                          <div className="tooltip">
+                            <GitHub className="h-6 w-6 mx-1 z-50" />
+                            <span className="tooltiptext">View Repo</span>
+                          </div>
+                        </a>
                       : ''
                     }
                     {project.link 
-                      ? <a href={project.link} target="_blank" rel="noreferrer"><Globe className="h-6 w-6 mx-1 z-50" /></a>
+                      ? <a href={project.link} target="_blank" rel="noreferrer">
+                          <div className="tooltip">
+                            <Globe className="h-6 w-6 mx-1 z-50" />
+                            <span className="tooltiptext">Visit Website</span>
+                          </div>
+                        </a>
                       : ''
                     }
                   </div>
