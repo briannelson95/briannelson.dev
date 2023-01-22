@@ -11,7 +11,7 @@ export const homepage = groq`
 `
 
 export const projectList = groq`
-    *[_type == 'projects']{
+    *[_type == 'projects'] | order(_createdAt asc){
         description,
         featured,
         github,
