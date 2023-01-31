@@ -12,10 +12,13 @@ type Base = {
 interface Projects extends Base {
     body:? Block[];
     featured: boolean;
-    image: MyImage;
+    image: any;
     slug: Slug;
     title: string;
-    tags: Category[];
+    tags:? Category[];
+    github:? string;
+    link:? string;
+    description:? string;
 }
 
 interface MyImage extends Base {
@@ -49,7 +52,12 @@ interface Span {
 }
 
 interface Category {
-    description: string;
-    title: string;
+    // description: string;
+    name: string;
+}
+
+interface Slug {
+    _type: "slug";
+    current: string;
 }
 

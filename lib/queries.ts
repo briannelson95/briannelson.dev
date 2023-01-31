@@ -1,14 +1,29 @@
 import { groq } from "next-sanity";
 
-export const homepage = groq`
-    *[_type == 'homepage']{
+export const homepage = groq`{
+    "pageData": *[_type == 'homepage']{
         cta{
             link->{slug}, 
             title  
         },
         title,
+    },
+    "projects": *[_type == 'projects'] | order(_createdAt asc){
+        description,
+        featured,
+        github,
+        image->{
+            alt,
+            image
+        },
+        link,
+        slug,
+        tags[]->{
+            name
+        },
+        title
     }
-`
+}`
 
 export const projectList = groq`
     *[_type == 'projects'] | order(_createdAt asc){

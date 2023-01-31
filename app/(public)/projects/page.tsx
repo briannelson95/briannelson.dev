@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 
 export default async function Projects() {
     const projects = await client.fetch(projectList);
+    // console.log(projects)
 
     if (!projects) {
         notFound();
