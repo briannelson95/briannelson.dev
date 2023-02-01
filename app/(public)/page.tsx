@@ -10,7 +10,7 @@ export const revalidate = 60;
 export default async function Home() {
     const data = await client.fetch(homepage)
     const projects = await client.fetch(projectList)
-    console.log(data.projects[0].tags)
+    // console.log(data.projects[0].tags)
     if (previewData()) {
         return (
             <PreviewSuspense fallback={(
