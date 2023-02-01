@@ -4,10 +4,11 @@ import urlFor from "../lib/urlFor";
 import {ArrowRightIcon} from '@sanity/icons'
 import ClientSideRoute from "./ClientSideRoute";
 import { GitHub, Globe } from "react-feather";
+import { Projects } from "../typings";
 
 
 type Props = {
-    projects: any[];
+    projects: Projects;
 }
 
 

@@ -10,9 +10,10 @@ type Base = {
 }
 
 interface Projects extends Base {
+    map(arg0: (project: any, index: any) => JSX.Element): import("react").ReactNode
     body:? Block[];
     featured: boolean;
-    image: any;
+    image: MyImage;
     slug: Slug;
     title: string;
     tags:? Category[];
