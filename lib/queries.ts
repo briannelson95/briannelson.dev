@@ -8,7 +8,7 @@ export const homepage = groq`{
         },
         title,
     },
-    "projects": *[_type == 'projects'] | order(_createdAt asc){
+    "projects": *[_type == 'projects'] | order(_updatedAt desc){
         description,
         featured,
         github,
@@ -26,7 +26,7 @@ export const homepage = groq`{
 }`
 
 export const projectList = groq`
-    *[_type == 'projects'] | order(_createdAt asc){
+    *[_type == 'projects'] | order(_updatedAt desc){
         description,
         featured,
         github,
