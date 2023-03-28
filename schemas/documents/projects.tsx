@@ -14,7 +14,7 @@ function MyPreviewComponent(props: any) {
         </Card>
       </Flex>
     )
-  }
+}
 
 export const projects = defineType({
     name: 'projects',

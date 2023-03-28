@@ -1,5 +1,6 @@
 import blogs from "./documents/blogs";
 import { categories } from "./documents/categories";
+import { frontend } from "./documents/frontend";
 import { homepage } from "./documents/homepage";
 import { mediaLibrary } from "./documents/mediaLibrary";
 import metadata from "./documents/metadata";
@@ -10,6 +11,7 @@ import siteSettings from "./documents/siteSettings";
 import blockContent from "./objects/blockContent";
 import contact from "./objects/contact";
 import { cta } from "./objects/cta";
+import { qrCode } from "./objects/feobj/qrCode";
 import { seo } from "./objects/seo";
 import { stats } from "./objects/stats";
 
@@ -17,6 +19,7 @@ export const schemaTypes = [
     pages,
     siteSettings,
     homepage,
+    frontend,
     contact,
     metadata,
     navigation,
@@ -27,5 +30,6 @@ export const schemaTypes = [
     projects,
     categories,
     stats,
-    cta
+    cta,
+    qrCode,
 ]

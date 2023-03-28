@@ -2,10 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
   :root {
     @apply dark:bg-zinc-800 dark:text-white
   }
+} */
+
+:root {
+  --qr-theme-white: hsl(0, 0%, 100%);
+  --qr-theme-gray: hsl(212, 45%, 89%);
+  --qr-theme-gray-blue: hsl(220, 15%, 55%);
+  --qr-theme-dark-blue: hsl(218, 44%, 22%);
+  --qr-theme-font: 'Outfit', sans-serif;
 }
 
 .background-animate {
