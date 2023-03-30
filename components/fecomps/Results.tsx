@@ -43,7 +43,7 @@ export default function Results({scores}: Props) {
                     {scores.map((item: any, index: React.Key | null | undefined) => (
                         <div key={index} className={styles.individual}>
                                 <h3 className='font-medium ju'>{item.title}</h3>
-                                <p>{item.score}/100</p>
+                                <p>{item.score} / 100</p>
                         </div>
                     ))}
                 </div>
