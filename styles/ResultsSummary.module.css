@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "Hanken Grotesk";
+    src: url("/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Hanken Grotesk Bold";
+    src: url("/fonts/HankenGrotesk-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Hanken Grotesk ExtraBold";
+    src: url("/fonts/HankenGrotesk-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: "Hanken Grotesk Medium";
+    src: url("/fonts/HankenGrotesk-Medium.ttf");
+}
+
+.mainCard {
+    width: 738px;
+    height: 513px;
+    max-width: 738px;
+    border-radius: 30px;
+    box-shadow: 0px 10px 20px 20px rgba(103, 66, 255, 0.05);
+    font-family: "Hanken Grotesk";
+    text-align: center;
+}
+
+.mainCard p {
+    margin: 0;
+    padding: 0;
+}
+
+.mainCard h1 {
+    font-family: "Hanken Grotesk Bold";
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.rectangle {
+    background: transparent;
+    height: 513px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--results-dark-gray-blue);
+    font-weight: bold;
+    padding: 0 1.5rem;
+}
+
+.number {
+    color: var(--results-white);
+}
+
+.rectangle:first-of-type {
+    background: var(--results-background-gradient);
+    border-radius: 30px;
+    color: var(--results-light-lavender);
+    padding: 0 4.5rem;
+    font-weight: normal;
+}
+
+.rectangle:first-of-type h1 {
+    font-size: 36px;
+    margin: 30px 0 16px 0;
+    color: var(--results-pale-blue);
+    font-family: "Hanken Grotesk Medium";
+}
+
+.rectangle:first-of-type h2 {
+    font-size: 24px;
+    margin: 30px 0;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 204px;
+    height: 204px;
+    border-radius: 999px;
+    background: var(--results-circle-gradient);
+}
+
+.individual {
+    width: 100%;
+    margin: 0.5rem 1.5rem;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.individual:nth-child(2){
+    background-color: var(--results-light-red-bg);
+    color: var(--results-light-red, 1);
+}
+
+.individual:nth-child(3){
+    background-color: var(--results-orange-yellow-bg);
+    color: var(--results-orange-yellow);
+}
+
+.individual:nth-child(4){
+    background-color: var(--results-green-teal-bg);
+    color: var(--results-green-teal);
+}
+
+.individual:nth-child(5){
+    background-color: var(--results-cobalt-blue-bg);
+    color: var(--results-cobalt-blue);
+}
+
+.individual p {
+    color: var(--results-dark-gray-blue);
+}

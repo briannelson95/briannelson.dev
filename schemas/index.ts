@@ -12,6 +12,8 @@ import blockContent from "./objects/blockContent";
 import contact from "./objects/contact";
 import { cta } from "./objects/cta";
 import { qrCode } from "./objects/feobj/qrCode";
+import { resultsSum } from "./objects/feobj/resultsSumm";
+import { scores } from "./objects/feobj/scores";
 import { seo } from "./objects/seo";
 import { stats } from "./objects/stats";
 
@@ -32,4 +34,6 @@ export const schemaTypes = [
     stats,
     cta,
     qrCode,
+    resultsSum,
+    scores,
 ]

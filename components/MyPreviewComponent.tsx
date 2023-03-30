@@ -1,4 +1,4 @@
-import {Stack, Card, Flex } from '@sanity/ui'
+import {Stack, Card, Flex, Text } from '@sanity/ui'
 
 export default function MyPreviewComponent(props: any) {
     const {title, url} = props

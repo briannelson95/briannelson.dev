@@ -9,7 +9,7 @@ export const frontend = defineType({
             name: 'options',
             options: {
                 collapsible: true,
-                collapsed: true
+                collapsed: false
             }
         }
     ],
@@ -32,6 +32,12 @@ export const frontend = defineType({
             name: 'qrCode',
             title: 'QR Code Component',
             type: 'qrCode',
+            fieldset: 'options'
+        }),
+        defineField({
+            name: 'resultsSummary',
+            title: 'Results Summary',
+            type: 'resultsSum',
             fieldset: 'options'
         })
     ],

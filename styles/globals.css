@@ -14,7 +14,22 @@
   --qr-theme-gray-blue: hsl(220, 15%, 55%);
   --qr-theme-dark-blue: hsl(218, 44%, 22%);
   --qr-theme-font: 'Outfit', sans-serif;
-}
+
+  --results-light-red: hsla(0, 100%, 67%);
+  --results-light-red-bg: hsla(0, 100%, 67%, 0.1);
+  --results-orange-yellow: hsl(39, 100%, 56%);
+  --results-orange-yellow-bg: hsla(39, 100%, 56%, 0.1);
+  --results-green-teal: hsl(166, 100%, 37%);
+  --results-green-teal-bg: hsla(166, 100%, 37%, 0.1);
+  --results-cobalt-blue: hsl(234, 85%, 45%);
+  --results-cobalt-blue-bg: hsla(234, 85%, 45%, 0.1);
+  --results-background-gradient: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  --results-circle-gradient: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  --results-white: hsl(0, 0%, 100%);
+  --results-pale-blue: hsl(221, 100%, 96%);
+  --results-light-lavender: hsl(241, 100%, 89%);
+  --results-dark-gray-blue: hsl(224, 30%, 27%);
+}  
 
 .background-animate {
   background-size: 200%;
