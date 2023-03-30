@@ -120,3 +120,33 @@
 .individual p {
     color: var(--results-dark-gray-blue);
 }
+
+.button {
+    width: 100%;
+    position: relative;
+    background-image: var(--result-dark-blue-gradient);
+    color: var(--results-white);
+    border-radius: 999px;
+    padding: 1rem;
+    margin: 2rem;
+    transition: background-color 300ms;
+    z-index: 1;
+}
+
+.button::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: var(--results-background-gradient);
+    z-index: -1;
+    transition: opacity 200ms linear;
+    opacity: 0;
+    border-radius: 999px;
+}
+
+.button:hover::before {
+    opacity: 1;
+}

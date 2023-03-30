@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '@/styles/ResultsSummary.module.css';
+import Link from 'next/link';
 
 type Props = {
     scores: any
@@ -25,8 +26,6 @@ export default function Results({scores}: Props) {
         }
     }
 
-    console.log(average(getNumbers(scores)))
-
     return (
         <div className={styles.mainCard}>
             <div className={styles.grid}>
@@ -46,6 +45,9 @@ export default function Results({scores}: Props) {
                                 <p>{item.score} / 100</p>
                         </div>
                     ))}
+                    <Link href={'/frontend-mentor'} className={styles.button}>
+                        Continue
+                    </Link>
                 </div>
             </div>
         </div>

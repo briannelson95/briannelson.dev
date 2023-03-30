@@ -29,6 +29,7 @@
   --results-pale-blue: hsl(221, 100%, 96%);
   --results-light-lavender: hsl(241, 100%, 89%);
   --results-dark-gray-blue: hsl(224, 30%, 27%);
+  --result-dark-blue-gradient: linear-gradient(hsl(224, 30%, 27%), hsl(224, 30%, 27%));
 }  
 
 .background-animate {
