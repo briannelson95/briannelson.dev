@@ -1,5 +1,5 @@
-import FENav from "../../../components/FENav"
-import "../../../styles/globals.css"
+import FENav from "@/components/FENav"
+import "@/styles/globals.css"
 
 export default function RootLayout({
   children,

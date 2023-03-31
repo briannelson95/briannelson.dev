@@ -24,7 +24,18 @@ This is my solution for the Result [Summary Component by Frontend Mentor](https:
 
 ## My Process
 
+### Built With
 
+- NextJS
+    - App Dir
+- Sanity.io
+- CSS Modules
+- Tailwind CSS
+- HTML Semantics
+- Flexbox
+- Grid
+
+### What I Learned
 
 ### Resources
 

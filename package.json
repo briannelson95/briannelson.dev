@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@portabletext/react": "^2.0.0",
+    "@sanity/icons": "^2.2.2",
     "@sanity/image-url": "^1.0.1",
     "@sanity/vision": "^3.0.0",
     "@tailwindcss/line-clamp": "^0.4.2",
