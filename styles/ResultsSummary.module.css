@@ -28,10 +28,10 @@
     text-align: center;
 }
 
-.mainCard p {
+/* .mainCard p {
     margin: 0;
     padding: 0;
-}
+} */
 
 .mainCard h1 {
     font-family: "Hanken Grotesk Bold";
@@ -92,9 +92,13 @@
     width: 100%;
     margin: 0.5rem 1.5rem;
     padding: 1rem 1rem;
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     border-radius: 10px;
+}
+
+.content {
+    display: flex;
 }
 
 .individual:nth-child(2){
