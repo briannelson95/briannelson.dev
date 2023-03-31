@@ -11,7 +11,7 @@ async function getData() {
     return res;
 }
 
-const metadata = {
+export const metadata = {
     title: "Results Summary | BrianNelson.dev"
 }
 
