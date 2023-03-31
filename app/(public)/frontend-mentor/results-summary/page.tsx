@@ -11,6 +11,10 @@ async function getData() {
     return res;
 }
 
+const metadata = {
+    title: "Results Summary | BrianNelson.dev"
+}
+
 export default async function ResultsSummary() {
     
     const data = await getData()

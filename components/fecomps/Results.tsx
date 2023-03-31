@@ -34,7 +34,6 @@ export default function Results({scores}: Props) {
                     <h2>Your Result</h2>
                     <div className={styles.circle}>
                         <Counter number={average(getNumbers(scores)).toFixed()} duration={0.5} />
-                        {/* <h3 className={`text-7xl ${styles.number} font-bold`}>{average(getNumbers(scores)).toFixed()}</h3> */}
                     </div>
                     <h1>{message(average(getNumbers(scores)).toFixed())}</h1>
                     <p>You scored higher than 65% of the people who have taken these tests.</p>
