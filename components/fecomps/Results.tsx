@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '@/styles/ResultsSummary.module.css';
 import Link from 'next/link';
+import Counter from './Counter';
 
 type Props = {
     scores: any
@@ -32,7 +33,8 @@ export default function Results({scores}: Props) {
                 <div className={styles.rectangle}>
                     <h2>Your Result</h2>
                     <div className={styles.circle}>
-                        <h3 className={`text-7xl ${styles.number} font-bold`}>{average(getNumbers(scores)).toFixed()}</h3>
+                        <Counter number={average(getNumbers(scores)).toFixed()} duration={0.5} />
+                        {/* <h3 className={`text-7xl ${styles.number} font-bold`}>{average(getNumbers(scores)).toFixed()}</h3> */}
                     </div>
                     <h1>{message(average(getNumbers(scores)).toFixed())}</h1>
                     <p>You scored higher than 65% of the people who have taken these tests.</p>
