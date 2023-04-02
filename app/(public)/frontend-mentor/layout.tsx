@@ -5,6 +5,15 @@ import { groq } from "next-sanity"
 
 export const revalidate = 172800;
 
+export const metadata = {
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+    }
+  }
+}
+
 export default async function RootLayout({
   children,
 }: {
