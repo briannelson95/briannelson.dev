@@ -154,3 +154,48 @@
 .button:hover::before {
     opacity: 1;
 }
+
+
+@media screen and (max-width: 375px) {
+    .mainCard {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr ;
+    }
+
+    .rectangle {
+        padding: 0 2rem;
+        font-weight: 800;
+    }
+
+    .rectangle:first-of-type {
+        max-height: 350px;
+        border-radius: 0 0 30px 30px;
+        padding: 0 2.5rem;
+    }
+
+    .rectangle:first-of-type h2 {
+        font-size: 18px;
+        margin: 20px 0;
+    }
+
+    .rectangle:first-of-type h1 {
+        font-size: 24px;
+        margin: 10px 0;
+        color: var(--results-pale-blue);
+        font-family: "Hanken Grotesk Medium";
+    }
+
+    .circle {
+        height: 140px;
+        width: 140px;
+    }
+
+    .button {
+        margin: 1rem 0;
+    }
+}

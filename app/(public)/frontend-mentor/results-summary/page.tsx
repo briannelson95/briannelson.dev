@@ -21,7 +21,7 @@ export default async function ResultsSummary() {
     const scores = data.resultsSummary.allResults.resultArr
 
     return (
-        <main className='w-screen h-screen flex justify-center items-center'>
+        <main className='w-screen h-screen sm:flex sm:justify-center sm:items-center'>
             <Results scores={scores} />
         </main>
     )

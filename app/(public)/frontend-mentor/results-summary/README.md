@@ -24,6 +24,9 @@ This is my solution for the Result [Summary Component by Frontend Mentor](https:
 
 ## My Process
 
+This solution took me longer than I expected mostly because of lack of free time, but I did decide to build this out onto an existing nextjs application of my portfolio website. I needed to first change around the structure to allow for the additional pages to be worked on as a clean slate. I'm using the NextJS 13 app directory which allows me to use `(group)` layouts. I moved my main portfolio (along with the root layout with my navigation) to a subfolder `(main)`. Now I have another folder at the same level as `(main)` titled `frontend-mentor` which has its own `layout.tsx` file.
+
+
 ### Built With
 
 - NextJS

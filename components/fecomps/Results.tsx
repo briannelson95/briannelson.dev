@@ -39,7 +39,7 @@ export default function Results({scores}: Props) {
                     <p>You scored higher than 65% of the people who have taken these tests.</p>
                 </div>
                 <div className={styles.rectangle}>
-                    <h2 className='text-left w-full font-bold text-2xl pt-7 mb-6'>Summary</h2>
+                    <h2 className='text-left w-full font-bold text-lg sm:text-2xl pt-5 sm:pt-7 mb-4 sm:mb-6'>Summary</h2>
                     {scores.map((item: any, index: React.Key | null | undefined) => (
                         <div key={index} className={styles.individual}>
                             <div className={styles.content}>
