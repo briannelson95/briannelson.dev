@@ -19,8 +19,8 @@ This challenge was a little tougher than the last. I decided to add this to my e
 
 ### Screenshot
 
-![](images/frontend-mentor-results-summary.png)
-![](image/results-summary-mobile.png)
+![](/public/images/frontend-mentor-results-summary.png)
+![](/public/image/results-summary-mobile.png)
 
 ### Links
 
