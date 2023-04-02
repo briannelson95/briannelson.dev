@@ -5,15 +5,6 @@ import { groq } from "next-sanity"
 
 export const revalidate = 172800;
 
-export const metadata = {
-  alternates: {
-    canonical: '/',
-    languages: {
-      'en-US': '/en-US',
-    }
-  }
-}
-
 export default async function RootLayout({
   children,
 }: {
@@ -21,7 +12,7 @@ export default async function RootLayout({
 }) {
   const data = await client.fetch(groq`*[_type == "frontend"] | order(_createdAt asc) {title, slug}`)
   return (
-    <html>
+    <html lang="en-US">
       <body className=''>
         <FENav props={data} />
         {children}
