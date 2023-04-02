@@ -15,7 +15,12 @@ This is my solution for the Result [Summary Component by Frontend Mentor](https:
 
 ## Overview
 
+This challenge was a little tougher than the last. I decided to add this to my existing NextJS application of my portfolio. This means I was also able to fetch data from my Sanity.io CMS. 
+
 ### Screenshot
+
+![](images/frontend-mentor-results-summary.png)
+![](image/results-summary-mobile.png)
 
 ### Links
 
@@ -25,6 +30,8 @@ This is my solution for the Result [Summary Component by Frontend Mentor](https:
 ## My Process
 
 This solution took me longer than I expected mostly because of lack of free time, but I did decide to build this out onto an existing nextjs application of my portfolio website. I needed to first change around the structure to allow for the additional pages to be worked on as a clean slate. I'm using the NextJS 13 app directory which allows me to use `(group)` layouts. I moved my main portfolio (along with the root layout with my navigation) to a subfolder `(main)`. Now I have another folder at the same level as `(main)` titled `frontend-mentor` which has its own `layout.tsx` file.
+
+I should have built mobile first and then converted to desktop but now I know for next time. I will also switch to using tailwind for all styling on my next challenge too.
 
 
 ### Built With
@@ -39,6 +46,40 @@ This solution took me longer than I expected mostly because of lack of free time
 - Grid
 
 ### What I Learned
+
+I learned that background gradients need to use the `background-image` css property and to transition to a gradient on hover, you need to use the `::before` property.
+
+```css
+.button {
+    width: 100%;
+    position: relative;
+    background-image: var(--result-dark-blue-gradient);
+    color: var(--results-white);
+    border-radius: 999px;
+    padding: 1rem;
+    margin: 2rem;
+    transition: background-color 300ms;
+    z-index: 1;
+}
+
+.button::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: var(--results-background-gradient);
+    z-index: -1;
+    transition: opacity 200ms linear;
+    opacity: 0;
+    border-radius: 999px;
+}
+
+.button:hover::before {
+    opacity: 1;
+}
+```
 
 ### Resources
 
