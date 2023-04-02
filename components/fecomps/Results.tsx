@@ -54,7 +54,7 @@ export default function Results({scores}: Props) {
                                                 : ""
                                 }
                                 <h3 className='font-medium px-2'>{item.title}</h3>
-                                <p className='ml-auto'>{item.score} / 100</p>
+                                <p className='ml-auto'>{item.score} <span className={`${styles.spanText} font-medium`}>/ 100</span></p>
                             </div>
                         </div>
                     ))}

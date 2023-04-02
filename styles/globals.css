@@ -28,6 +28,7 @@
   --results-white: hsl(0, 0%, 100%);
   --results-pale-blue: hsl(221, 100%, 96%);
   --results-light-lavender: hsl(241, 100%, 89%);
+  --results-lighter-lavender: hsl(224, 30%, 27%, 0.7);
   --results-dark-gray-blue: hsl(224, 30%, 27%);
   --result-dark-blue-gradient: linear-gradient(hsl(224, 30%, 27%), hsl(224, 30%, 27%));
 }  

@@ -125,6 +125,10 @@
     color: var(--results-dark-gray-blue);
 }
 
+.spanText {
+    color: var(--results-lighter-lavender);
+}
+
 .button {
     width: 100%;
     position: relative;
@@ -154,6 +158,8 @@
 .button:hover::before {
     opacity: 1;
 }
+
+
 
 
 @media screen and (max-width: 420px) {
@@ -187,8 +193,6 @@
     .rectangle:first-of-type h1 {
         font-size: 24px;
         margin: 10px 0;
-        color: var(--results-pale-blue);
-        font-family: "Hanken Grotesk Medium";
     }
 
     .circle {
