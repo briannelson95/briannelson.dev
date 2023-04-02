@@ -40,7 +40,10 @@ const Count = (props: Props) => {
     }, [number, duration]);
   
     return (
-        <i className='text-7xl text-white font-bold not-italic'>{count}</i>
+        <div>
+          <p className='text-6xl mb-2 text-white font-bold not-italic'>{count}</p>
+          <p>of 100</p>
+        </div>
     );
   }
   
