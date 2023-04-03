@@ -23,6 +23,10 @@ async function getData() {
     return res
 }
 
+export const metadata = {
+    title: "Product Preview | Frontend Mentor"
+}
+
 export default async function ProductPreview() {
     const data = await getData()
 
