@@ -39,6 +39,12 @@ export const frontend = defineType({
             title: 'Results Summary',
             type: 'resultsSum',
             fieldset: 'options'
+        }),
+        defineField({
+            name: 'productPrev',
+            title: 'Product Preview',
+            type: 'productInfo',
+            fieldset: 'options'
         })
     ],
 })

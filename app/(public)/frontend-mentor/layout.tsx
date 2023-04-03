@@ -3,8 +3,6 @@ import { client } from "@/lib/sanity.client"
 import "@/styles/globals.css"
 import { groq } from "next-sanity"
 
-export const revalidate = 172800;
-
 export default async function RootLayout({
   children,
 }: {

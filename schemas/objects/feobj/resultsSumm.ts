@@ -46,8 +46,7 @@ export const resultsSum = defineType({
             validation: Rule => Rule.max(100)
         }),
     ],
-    // options: {
-    //     collapsed: true,
-    //     columns: 2
-    // }
+    options: {
+        collapsed: true
+    }
 })
