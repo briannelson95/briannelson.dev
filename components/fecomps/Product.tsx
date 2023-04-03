@@ -33,13 +33,13 @@ export default function Product({category, title, desc, price, oldPrice, image, 
                 src={urlFor(image.image).url()}
                 height={1000}
                 width={1000}
-                alt={mobileImage.alt}
+                alt={image.alt}
                 className='h-[450px] bg-slate-500 rounded-tl-[10px] rounded-bl-[10px] hidden sm:block'
                 priority
             />
             <div className='px-6 pb-6 sm:mt-8 sm:px-9'>
                 <h3 className='uppercase tracking-widest pb-2 sm:pb-3'>{category ? category : 'Category'}</h3>
-                <h1 className={`${fraunces.className} text-3xl font-bold text-black pb-5`}>{title ? title : 'Product Title'}</h1>
+                <h1 className={`${fraunces.className} text-3xl font-bold text-product-dark-blue pb-5`}>{title ? title : 'Product Title'}</h1>
                 <p className='pb-5 sm:pb-7'>{desc ? desc : "Product description lorem ipsum"}</p>
                 {price 
                     ? <div className='flex items-center space-x-4 pb-6 sm:pb-7'>
@@ -48,7 +48,7 @@ export default function Product({category, title, desc, price, oldPrice, image, 
                     </div>
                     : <h2 className={`${fraunces.className} font-bold text-3xl text-product-dark-cyan pb-6 sm:pb-7`}>{oldPrice ? `$${oldPrice}` : "$99.99"}</h2>
                 }
-                <button className='bg-product-dark-cyan text-white py-4 w-full flex justify-center rounded-lg' onClick={() => router.push('../frontend-mentor')}>Add to Cart</button>
+                <button className='bg-product-dark-cyan text-white py-4 w-full flex justify-center rounded-lg hover:bg-[#1a4130] active:bg-[#1a4130] transition-all duration-200 ease-in-out' onClick={() => router.push('../frontend-mentor')}>Add to Cart</button>
             </div>
         </div>
     )
