@@ -45,6 +45,11 @@ export const frontend = defineType({
             title: 'Product Preview',
             type: 'productInfo',
             fieldset: 'options'
+        }),
+        defineField({
+            name: 'news',
+            type: 'newsData',
+            fieldset: 'options'
         })
     ],
 })
