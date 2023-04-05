@@ -1,5 +1,6 @@
 "use client"
 
+import Link from 'next/link';
 import React, { useState } from 'react'
 
 export function MenuIcon(){
@@ -32,9 +33,11 @@ export default function NewsNav({nav}: any) {
             <nav className={`${open ? 'visible z-40' : 'hidden'} bg-news-off-white text-news-dark-blue min-h-screen absolute right-0 top-0 w-2/3 flex flex-col justify-center pl-6`}>
                 <ul className=''>
                     {nav.map((item: string, index: any) => (
-                        <li key={index} className='p-3 font-bold'>
-                            {item}
-                        </li>
+                        <Link key={index} href={`/frontend-mentor/news//#${item.toLowerCase()}`}>
+                            <li className='p-3 font-bold'>
+                                {item}
+                            </li>
+                        </Link>
                     ))}
                 </ul>
             </nav>
