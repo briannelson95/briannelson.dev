@@ -15,7 +15,7 @@ export default function NewsPage({featuredPost}: any) {
                     height={1000}
                     className='object-cover h-[300px]'
                 />
-                <h1 className='font-extrabold text-[40px] leading-[0.95]'>{featuredPost.title}</h1>
+                <h1 className='font-extrabold text-[40px] leading-[0.95] tracking-[0.25px]'>{featuredPost.title}</h1>
                 <p className='text-news-dark-grayish-blue'>{featuredPost.previewText}</p>
                 <Link href={''}>
                     <button className='bg-news-soft-red text-news-off-white uppercase py-3 px-5 tracking-[4.1px] my-5'>Read More</button>
