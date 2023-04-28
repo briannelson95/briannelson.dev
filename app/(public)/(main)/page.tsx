@@ -5,6 +5,7 @@ import PreviewSuspense from "../../../components/PreviewSuspense"
 import ProjectList from "../../../components/ProjectList";
 import PreviewProjectList from "../../../components/PreviewProjectList";
 import { Projects } from "../../../typings";
+import Header from "@/components/Header";
 
 export const revalidate = 60;
 
@@ -25,6 +26,7 @@ export default async function Home() {
                 </div>
             )}>
                 {/* PreviewProjectList */}
+                <Header />
                 <PreviewProjectList query={projectList} />
             </PreviewSuspense>
         )
@@ -34,6 +36,7 @@ export default async function Home() {
     // console.log(projects)
     return (
         <div>
+            <Header />
             <ProjectList projects={projects} />
         </div>
     )

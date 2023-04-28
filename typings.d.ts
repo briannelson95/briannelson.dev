@@ -62,3 +62,9 @@ interface Slug {
     current: string;
 }
 
+type Page = {
+    title: string;
+    slug: Slug;
+}
+
+interface Navigation extends Array<Page> {}
