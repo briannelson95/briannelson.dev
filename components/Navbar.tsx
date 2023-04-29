@@ -32,12 +32,12 @@ export default function Navbar({navigation}: any) {
       <ul className="relative">
         {icon}
         <div className={`
-          absolute bg-zinc-700 w-full h-screen ${open ? 'opacity-100' : 'opacity-0'} flex flex-col justify-center items-center
-          md:static md:top-auto md:opacity-100 md:h-8 md:flex-row md:justify-around md:bg-transparent
+          absolute bg-zinc-700 w-full h-screen ${open ? 'opacity-100 z-[99]' : 'opacity-0 -z-[999]'} flex flex-col justify-center items-center space-y-8
+          md:static md:top-auto md:opacity-100 md:h-8 md:flex-row md:justify-around md:bg-transparent md:space-y-0
         `}>
           {navigation.navigation.map((item: any, index: any) => (
-            <li key={index}>
-              <Link href={`/${item.slug.current}`} className="hover:underline">
+            <li key={index} className="hover:underline text-3xl font-bold md:text-base md:font-normal">
+              <Link href={`/${item.slug.current}`}>
                 {item.title}
               </Link>
             </li>
@@ -47,6 +47,7 @@ export default function Navbar({navigation}: any) {
           </div>
         </div>
       </ul>
+      <Header />
     </nav>
   )
 }

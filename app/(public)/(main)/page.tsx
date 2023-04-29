@@ -26,7 +26,6 @@ export default async function Home() {
                 </div>
             )}>
                 {/* PreviewProjectList */}
-                <Header />
                 <PreviewProjectList query={projectList} />
             </PreviewSuspense>
         )
@@ -36,7 +35,6 @@ export default async function Home() {
     // console.log(projects)
     return (
         <div>
-            <Header />
             <ProjectList projects={projects} />
         </div>
     )
