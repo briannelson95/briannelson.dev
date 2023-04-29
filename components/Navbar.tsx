@@ -16,7 +16,7 @@ export default function Navbar({navigation}: any) {
       setIcon(<MenuIcon className='absolute top-2 right-2 md:hidden z-[999]' height={40} width={40} onClick={handleOpen} />)
   }
 
-  const [open, setOpen] = useState(null || Boolean);
+  const [open, setOpen] = useState(false);
   const [icon, setIcon] = useState(<MenuIcon className="absolute top-2 right-2 md:hidden z-[999]" width={40} height={40} onClick={handleOpen} />);
 
   useEffect(() => {
@@ -28,22 +28,25 @@ export default function Navbar({navigation}: any) {
   }, [open])
 
   return (
-    <div className="relative">
-      {icon}
-      <nav className={`${open ? 'visible' : 'hidden'} h-screen bg-zinc-700 md:visible md:h-10 md:bg-transparent`}>
-        <div className="flex flex-col justify-center items-center h-full md:flex-row md:justify-around">
+    <nav>
+      <ul className="relative">
+        {icon}
+        <div className={`
+          absolute bg-zinc-700 w-full h-screen ${open ? 'opacity-100' : 'opacity-0'} flex flex-col justify-center items-center
+          md:static md:top-auto md:opacity-100 md:h-8 md:flex-row md:justify-around md:bg-transparent
+        `}>
           {navigation.navigation.map((item: any, index: any) => (
-            <li key={index} className={`list-none text-3xl font-bold py-8 md:text-base md:font-normal`}>
+            <li key={index}>
               <Link href={`/${item.slug.current}`} className="hover:underline">
                 {item.title}
               </Link>
             </li>
           ))}
+          <div className="absolute bottom-6 md:hidden" >
+            Email me
+          </div>
         </div>
-        <div className="absolute bottom-6 md:hidden" >
-          Email me
-        </div>
-      </nav>
-    </div>
+      </ul>
+    </nav>
   )
 }
