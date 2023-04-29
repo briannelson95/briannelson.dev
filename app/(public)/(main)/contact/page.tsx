@@ -1,3 +1,4 @@
+import ContactForm from '@/components/ContactForm'
 import React from 'react'
 
 export const metadata = {
@@ -6,6 +7,8 @@ export const metadata = {
 
 export default function Contact() {
   return (
-    <div>Contact</div>
+    <main>
+      <ContactForm />
+    </main>
   )
 }
