@@ -4,8 +4,7 @@ import { client } from "../../../lib/sanity.client";
 import PreviewSuspense from "../../../components/PreviewSuspense"
 import ProjectList from "../../../components/ProjectList";
 import PreviewProjectList from "../../../components/PreviewProjectList";
-import { Projects } from "../../../typings";
-import Header from "@/components/Header";
+import { Metadata } from "next";
 
 export const revalidate = 60;
 
