@@ -36,7 +36,7 @@ export default function Navbar({navigation}: any) {
           md:static md:top-auto md:opacity-100 md:h-8 md:flex-row md:justify-around md:bg-transparent md:space-y-0
         `}>
           {navigation.navigation.map((item: any, index: any) => (
-            <li key={index} className="hover:underline text-3xl font-bold md:text-base md:font-normal">
+            <li key={index} className="hover:underline text-3xl font-bold md:text-base md:font-normal" onClick={handleClose}>
               <Link href={`/${item.slug.current}`}>
                 {item.title}
               </Link>

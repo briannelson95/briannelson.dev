@@ -9,6 +9,7 @@ import { newsPost } from "./documents/newsPosts";
 import { pages } from "./documents/pages";
 import { projects } from "./documents/projects";
 import siteSettings from "./documents/siteSettings";
+import { technologies } from "./documents/technologies";
 import blockContent from "./objects/blockContent";
 import contact from "./objects/contact";
 import { cta } from "./objects/cta";
@@ -41,5 +42,6 @@ export const schemaTypes = [
     scores,
     productInfo,
     newsData,
-    newsPost
+    newsPost,
+    technologies
 ]

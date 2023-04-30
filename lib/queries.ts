@@ -2,6 +2,14 @@ import { groq } from "next-sanity";
 
 export const homepage = groq`{
     "pageData": *[_type == 'homepage']{
+        ...,
+        tech[]-> {
+            title,
+            image->{
+                alt,
+                image
+            }
+        },
         cta{
             link->{slug}, 
             title  

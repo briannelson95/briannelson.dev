@@ -47,6 +47,19 @@ export const homepage = defineType({
             type: 'cta',
         }),
         defineField({
+            name: 'tech',
+            title: "Tech",
+            type: 'array',
+            of: [
+                {
+                    type: 'reference',
+                    to: [
+                        {type: 'technologies'}
+                    ]
+                }
+            ]
+        }),
+        defineField({
             name: 'seo',
             type: 'seo',
             fieldset: 'seo'
