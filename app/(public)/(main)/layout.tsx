@@ -66,7 +66,7 @@ export default async function RootLayout({
   `)
 
   return (
-    <html>
+    <html className='overflow-x-hidden'>
       <head />
       <body className='max-w-7xl mx-auto dark:bg-zinc-800 dark:text-white overflow-x-hidden'>
         <Navbar navigation={navigation} />
