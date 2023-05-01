@@ -24,7 +24,7 @@ export const RichTextComponent: any = {
         },
         code: ({ value }: any) => {
             return (
-                <div className='bg-zinc-700 p-5 m-5'>
+                <div className='dark:bg-zinc-700 p-5 m-5 bg-zinc-300'>
                     <Refractor
                         language={value.language}
                         value={value.code}
