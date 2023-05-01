@@ -43,7 +43,7 @@ export default async function Home() {
                             alt={item.image.alt}
                             height={100}
                             width={100}
-                            className='w-14'
+                            className='w-14 z-50'
                         />
                         {item.title}
                     </GradientShadow> 
