@@ -6,6 +6,7 @@ import { myStructure } from './deskStructure'
 import { myTheme } from './theme'
 import StudioNavbar from './components/StudioNavbar'
 import { getDefaultDocumentNode } from './structure'
+import { codeInput } from '@sanity/code-input'
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!;
@@ -23,7 +24,8 @@ export default defineConfig({
       structure: myStructure,
       defaultDocumentNode: getDefaultDocumentNode
     }), 
-    visionTool()
+    visionTool(),
+    codeInput()
   ],
 
   studio: {

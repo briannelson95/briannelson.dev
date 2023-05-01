@@ -44,5 +44,8 @@ export default {
             title: 'Image',
             type: 'image'
         },
+        {
+            type: 'code'
+        }
     ],
 }

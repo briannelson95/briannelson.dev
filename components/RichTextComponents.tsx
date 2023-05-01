@@ -1,6 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import urlFor from '../lib/urlFor';
+import Refractor from 'react-refractor'
+import ts from 'refractor/lang/typescript'
+import tsx from 'refractor/lang/tsx'
+
+Refractor.registerLanguage(ts)
+Refractor.registerLanguage(tsx)
 
 export const RichTextComponent: any = {
     types: {
@@ -15,6 +21,17 @@ export const RichTextComponent: any = {
                     />
                 </div>
             );
+        },
+        code: ({ value }: any) => {
+            return (
+                <div className='bg-zinc-700 p-5 m-5'>
+                    <Refractor
+                        language={value.language}
+                        value={value.code}
+                        markers={value.highlightedLines}
+                    />
+                </div>
+            )
         }
     },
     list: {
