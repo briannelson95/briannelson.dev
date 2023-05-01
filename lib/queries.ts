@@ -34,7 +34,7 @@ export const homepage = groq`{
 }`
 
 export const projectList = groq`
-    *[_type == 'projects'] | order(_updatedAt desc){
+    *[_type == 'projects'] | order(_createdAt desc){
         description,
         featured,
         github,
