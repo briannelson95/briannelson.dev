@@ -64,7 +64,7 @@ export const RichTextComponent: any = {
                 <Link
                     href={value.href}
                     rel={rel}
-                    className="underline decoration-slate-800"
+                    className="underline decoration-slate-800 text-purple-600 dark:text-purple-500"
                 >
                     {children}
                 </Link>
