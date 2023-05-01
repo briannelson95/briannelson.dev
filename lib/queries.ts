@@ -16,7 +16,7 @@ export const homepage = groq`{
         },
         title,
     },
-    "projects": *[_type == 'projects'] | order(_updatedAt desc){
+    "projects": *[_type == 'projects'] | order(_createdAt desc){
         description,
         featured,
         github,
