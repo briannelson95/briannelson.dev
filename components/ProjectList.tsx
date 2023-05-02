@@ -29,6 +29,7 @@ export default function ProjectList({ projects }: Props) {
                     src={urlFor(project.image.image).url()}
                     alt={project.image.alt}
                     fill
+                    loading="lazy"
                   />
                   <div className="absolute bottom-0 w-full bg-opacity-30 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-5 flex justify-between">
                     <div>
