@@ -1,12 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import urlFor from '../lib/urlFor';
-import Refractor from 'react-refractor'
-import ts from 'refractor/lang/typescript'
-import tsx from 'refractor/lang/tsx'
+import Refractor from 'react-refractor';
+import ts from 'refractor/lang/typescript';
+import tsx from 'refractor/lang/tsx';
+import css from 'refractor/lang/css';
 
-Refractor.registerLanguage(ts)
-Refractor.registerLanguage(tsx)
+Refractor.registerLanguage(ts);
+Refractor.registerLanguage(tsx);
+Refractor.registerLanguage(css);
 
 export const RichTextComponent: any = {
     types: {
