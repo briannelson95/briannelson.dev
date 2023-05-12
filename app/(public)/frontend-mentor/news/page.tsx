@@ -22,12 +22,12 @@ export default async function NewsHomepage() {
     `)
 
     const featuredPost = data.news.posts[0];
-
-    // console.log(featuredPost.image)
+    const posts = data.news.posts
+    const removePosts = posts.shift()
 
     return (
         <main className='min-h-screen px-4 pt-[88px]'>
-            <NewsPage featuredPost={featuredPost}/>
+            <NewsPage featuredPost={featuredPost} posts={posts}/>
         </main>
     )
 }
