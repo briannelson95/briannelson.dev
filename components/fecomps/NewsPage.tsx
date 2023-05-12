@@ -16,25 +16,27 @@ export default function NewsPage({featuredPost, posts}: any) {
         return trending.indexOf(itm.category) > -1
     })
 
-    console.log(trendingPosts)
+    // console.log(trendingPosts)
     return (
-        <div className={`${inter.className} text-news-dark-blue space-y-16 mb-20`}>
-            <section className='space-y-5' id='popular'>
+        <div className={`${inter.className} text-news-dark-blue space-y-16 mb-20 md:grid md:grid-cols-3 md:gap-y-16 md:gap-x-7 md:space-y-0`}>
+            <section className='space-y-5 md:col-span-2 md:grid md:grid-cols-2' id='popular'>
                 <Image 
                     src={urlFor(featuredPost.image.image).url()}
                     alt={featuredPost.image.alt}
                     width={1000}
                     height={1000}
-                    className='object-cover h-[300px]'
+                    className='object-cover h-[300px] md:w-full md:col-span-2'
                 />
-                <h1 className='font-extrabold text-[40px] leading-[0.95] tracking-[0.25px]'>{featuredPost.title}</h1>
-                <p className='text-news-dark-grayish-blue'>{featuredPost.previewText}</p>
-                <Link href={''}>
-                    <button className='bg-news-soft-red text-news-off-white uppercase py-3 px-5 tracking-[4.1px] mt-5'>Read More</button>
-                </Link>
+                <h1 className='font-extrabold text-[40px] leading-[0.95] tracking-[0.25px] md:pr-20 md:text-5xl'>{featuredPost.title}</h1>
+                <div>
+                    <p className='text-news-dark-grayish-blue'>{featuredPost.previewText}</p>
+                    <Link href={''}>
+                        <button className='bg-news-soft-red text-news-off-white uppercase py-3 px-5 tracking-[4.1px] mt-5'>Read More</button>
+                    </Link>
+                </div>
             </section>
 
-            <section className='bg-news-dark-blue text-news-off-white py-5 px-5'>
+            <section className='bg-news-dark-blue text-news-off-white py-5 px-5 md:col-span-1'>
                 <h2 className='text-3xl text-news-soft-orange font-bold tracking-[1.2px] mb-8' id='new'>New</h2>
                 {newPosts.map((item: any, index: any) => {
                     if (index == newPosts.length - 1) {
@@ -55,7 +57,7 @@ export default function NewsPage({featuredPost, posts}: any) {
                 })}
             </section>
 
-            <section className='space-y-8'>
+            <section className='space-y-8 md:col-span-3 md:grid md:grid-cols-3 md:space-y-0 md:gap-x-7'>
                 {trendingPosts.map((item: any, index: number) => (
                     <article key={index} className="grid grid-cols-3 gap-6">
                         <Image

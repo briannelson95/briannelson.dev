@@ -7,7 +7,7 @@ export default async function RootLayout({children,}: {children: React.ReactNode
 
     return (
         <html lang="en-US">
-            <body className='bg-news-off-white relative'>
+            <body className='bg-news-off-white relative max-w-6xl md:mx-auto'>
                 <NewsNav nav={data.news.nav}/>
                 {children}
             </body>

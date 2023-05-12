@@ -31,14 +31,19 @@ export default function NewsNav({nav}: any) {
       }, [open])
 
     return (
-        <div className={`absolute top-0 w-full min-h-screen ${open ? 'bg-news-dark-blue/40 z-[99]' : 'bg-unset -z-[0]'} px-4 py-7`}>
+        <div className={`
+            absolute top-0 w-full min-h-screen ${open ? 'bg-news-dark-blue/40 z-[99]' : 'bg-unset -z-[0]'} px-4 py-7
+        `}>
             <div className='flex justify-between'>
                 <p>Logo</p>
                 <div onClick={handleOpen} className='z-50'>
                     {open ? <CloseIcon /> : <MenuIcon />}
                 </div>
             </div>
-            <nav className={`${open ? 'visible z-40' : 'hidden '} bg-news-off-white text-news-dark-blue min-h-screen absolute right-0 top-0 w-2/3 flex flex-col pt-36 pl-6`}>
+            <nav className={`
+                ${open ? 'visible z-40' : 'hidden '} bg-news-off-white text-news-dark-blue min-h-screen absolute right-0 top-0 w-2/3 flex flex-col pt-36 pl-6
+                md:visible
+            `}>
                 <ul className=''>
                     {nav.map((item: string, index: any) => (
                         <Link key={index} href={`/frontend-mentor/news//#${item.toLowerCase()}`}>
