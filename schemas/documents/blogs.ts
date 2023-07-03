@@ -1,3 +1,4 @@
+import { createImprovedAction } from '@/actions/ImprovedAction'
 import {ComposeIcon} from '@sanity/icons'
 
 export default {
@@ -54,5 +55,8 @@ export default {
         }
 
     ],
-    
+    document: {
+        actions: (prev: any) =>
+            prev.map((originalAction: any) => (originalAction.action === 'publish' ? createImprovedAction(originalAction) : originalAction)),
+        },
 }
