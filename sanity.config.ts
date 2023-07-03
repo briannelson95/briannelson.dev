@@ -7,6 +7,7 @@ import { myTheme } from './theme'
 import StudioNavbar from './components/StudioNavbar'
 import { getDefaultDocumentNode } from './structure'
 import { codeInput } from '@sanity/code-input'
+import { createImprovedAction } from './actions/ImprovedAction'
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!;
@@ -27,6 +28,11 @@ export default defineConfig({
     visionTool(),
     codeInput()
   ],
+
+  document: {
+    actions: (prev) =>
+      prev.map((originalAction) => (originalAction.action === 'publish' ? createImprovedAction(originalAction) : originalAction)),
+  },
 
   studio: {
     components: {
