@@ -19,6 +19,13 @@ module.exports = {
         'news-grayish-blue': 'hsl(233, 8%, 79%)',
         'news-dark-grayish-blue': 'hsl(236, 13%, 42%)',
         'news-dark-blue': 'hsl(240, 100%, 5%)',
+
+        'rating-orange': 'hsl(25, 97%, 53%)',
+        'rating-white': 'hsl(0, 0%, 100%)',
+        'rating-very-dark-blue': 'hsl(216, 12%, 8%)',
+        'rating-light-gray': 'hsl(217, 12%, 63%)',
+        'rating-medium-gray': 'hsl(216, 12%, 54%)',
+        'rating-dark-blue': 'hsl(213, 19%, 18%)',
       }
     },
   },
