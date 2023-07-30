@@ -1,6 +1,6 @@
 # Frontend Mentor - Product preview card component solution
 
-This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
@@ -31,19 +31,18 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/briannelson95/briannelson.dev/blob/main/components/fecomps/Product.tsx](https://github.com/briannelson95/briannelson.dev/blob/main/components/fecomps/Product.tsx)
-- Live Site URL: [https://www.briannelson.dev/frontend-mentor/product-preview](https://www.briannelson.dev/frontend-mentor/product-preview)
+- Solution URL: [https://github.com/briannelson95/briannelson.dev/blob/main/components/fecomps/RatingCard.tsx](https://github.com/briannelson95/briannelson.dev/blob/main/components/fecomps/RatingCard.tsx)
+- Live Site URL: [https://www.briannelson.dev/frontend-mentor/interactive-rating](https://www.briannelson.dev/frontend-mentor/interactive-rating)
 
 ## My process
 
-I completed this solution much quicker than the previous. I decided to use TailwindCSS for all of the styling, making use of the [`tailwind.config.js`](https://github.com/briannelson95/briannelson.dev/blob/main/tailwind.config.js). I extended the theme to include the specific colors that were required in this challenge. 
+This challenge was fairly easy for me as I have been working on a similar project in my freelance work. I chose not to hook any of the ratings up to a database to store. If this was something that I would like to store and see all the data for I would use [supabase](https://supabase.com). The use of tailwind has made the challenges easier to complete, as I only need to set the colors and font sizes in my [`tailwind.config.js`](https://github.com/briannelson95/briannelson.dev/blob/main/tailwind.config.js) and then I can call them as `classNames`.
 
 ### Built with
 
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
 - TailwindCSS
-- Sanity.io
 - Flexbox
 - CSS Grid
 - Mobile-first workflow

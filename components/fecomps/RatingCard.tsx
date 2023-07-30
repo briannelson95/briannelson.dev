@@ -49,7 +49,7 @@ export default function RatingCard() {
                     </div>
                     <div className='text-center space-y-3'>
                         <h1 className='text-3xl font-semibold'>Thank you!</h1>
-                        <p className='text-[15px] text-rating-light-gray'>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
+                        <p className='text-[15px] text-rating-light-gray'>We appreciate you taking the time to give a rating. If you ever need more support, dont hesitate to get in touch!</p>
                     </div>
                 </>
             ) : (
