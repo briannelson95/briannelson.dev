@@ -26,6 +26,13 @@ module.exports = {
         'rating-light-gray': 'hsl(217, 12%, 63%)',
         'rating-medium-gray': 'hsl(216, 12%, 54%)',
         'rating-dark-blue': 'hsl(213, 19%, 18%)',
+
+
+        'newsletter-tomato': 'hsl(4, 100%, 67%)',
+        'newsletter-dark-slate-gray': 'hsl(234, 29%, 20%)',
+        'newsletter-charcoal-gray': 'hsl(235, 18%, 26%)',
+        'newsletter-gray': 'hsl(231, 7%, 60%)',
+        'newsletter-white': 'hsl(0, 0%, 100%)',
       }
     },
   },
