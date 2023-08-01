@@ -45,7 +45,7 @@ export default function Newsletter() {
       ) : (
         <>
           <div className='md:order-2'>
-            <div className='md:hidden'>
+            <div className='md:hidden w-full'>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"

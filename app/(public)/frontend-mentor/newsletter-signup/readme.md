@@ -19,29 +19,48 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 
 Users should be able to:
 
-- View the optimal layout depending on their device's screen size
-- See hover and focus states for interactive elements
+- Add their email and submit the form
+- See a success message with their email after successfully submitting the form
+- See form validation messages if:
+  - The field is left empty
+  - The email address is not formatted correctly
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
 
 ### Screenshot
 
-![](/public/images/product-screenshot.png)
-![](/public/images/product-mobile-screenshot.png)
+![](/public/images/newsletter-signup.png)
+![](/public/images/newsletter-mobile.png)
 
 ### Links
 
-- Solution URL: [https://github.com/briannelson95/briannelson.dev/blob/main/components/fecomps/Product.tsx](https://github.com/briannelson95/briannelson.dev/blob/main/components/fecomps/Product.tsx)
-- Live Site URL: [https://www.briannelson.dev/frontend-mentor/product-preview](https://www.briannelson.dev/frontend-mentor/product-preview)
+- Solution URL: [https://github.com/briannelson95/briannelson.dev/blob/main/components/fecomps/Newsletter.tsx](https://github.com/briannelson95/briannelson.dev/blob/main/components/fecomps/Newsletter.tsx)
+- Live Site URL: [https://www.briannelson.dev/frontend-mentor/newsletter-signup](https://www.briannelson.dev/frontend-mentor/newsletter-signup)
 
 ## My process
 
-I completed this solution much quicker than the previous. I decided to use TailwindCSS for all of the styling, making use of the [`tailwind.config.js`](https://github.com/briannelson95/briannelson.dev/blob/main/tailwind.config.js). I extended the theme to include the specific colors that were required in this challenge. 
+This was one of the quickest challenges I've completed for Frontend Mentor. I started with the mobile design as I'm using TailwindCSS and it's much easier to work mobile and then make adjustments for desktop. The part that took me the longest was validating the email address to be in the correct format. I haven't worked with RegEx a lot so I found a [resource](https://www.tutorialspoint.com/regex-in-reactjs) that explained how I could do this and I'll post the code below.
+
+```tsx
+    const validEmail = new RegExp(
+        '^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$'
+    );
+
+    const validate = (e: any) => {
+        e.preventDefault()
+        if (!validEmail.test(email)) {
+            setEmailErr(true)
+        } else {
+            setEmailErr(false)
+            setSuccess(true)
+        }
+    }
+```
 
 ### Built with
 
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
-- TailwindCSS
-- Sanity.io
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
