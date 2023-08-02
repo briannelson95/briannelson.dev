@@ -32,10 +32,11 @@ export default function Countdown({data}: any) {
         { label: 'Seconds', value: timeLeft.seconds },
     ];
     
+    const text = "We're launching soon!"
 
     return (
         <div className='w-full h-full flex flex-col items-center mt-40 absolute top-0 z-50 px-2 space-y-10'>
-            <h1 className='text-xl uppercase tracking-[0.25em] text-center'>We're launching soon!</h1>
+            <h1 className='text-xl uppercase tracking-[0.25em] text-center'>{text}</h1>
             <div className='w-full flex gap-4 mx-4 justify-center items-center'>
                 {timeComponents.map((component) => (
                     <div key={component.label}>
