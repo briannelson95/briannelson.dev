@@ -50,6 +50,11 @@ export const frontend = defineType({
             name: 'news',
             type: 'newsData',
             fieldset: 'options'
-        })
+        }),
+        defineField({
+            name: 'launch',
+            type: 'launchDate',
+            fieldset: 'options'
+        }),
     ],
 })

@@ -13,6 +13,7 @@ import { technologies } from "./documents/technologies";
 import blockContent from "./objects/blockContent";
 import contact from "./objects/contact";
 import { cta } from "./objects/cta";
+import { launchDate } from "./objects/feobj/launchDate";
 import { newsData } from "./objects/feobj/newsData";
 import { productInfo } from "./objects/feobj/productInfo";
 import { qrCode } from "./objects/feobj/qrCode";
@@ -43,5 +44,6 @@ export const schemaTypes = [
     productInfo,
     newsData,
     newsPost,
-    technologies
+    technologies,
+    launchDate,
 ]

@@ -33,6 +33,16 @@ module.exports = {
         'newsletter-charcoal-gray': 'hsl(235, 18%, 26%)',
         'newsletter-gray': 'hsl(231, 7%, 60%)',
         'newsletter-white': 'hsl(0, 0%, 100%)',
+
+        'count-gray-blue': 'hsl(237, 18%, 59%)',
+        'count-soft-red': 'hsl(345, 95%, 68%)',
+        'count-white': 'hsl(0, 0%, 100%)',
+        'count-dark-desaturated-blue': 'hsl(236, 21%, 26%)',
+        'count-very-dark-blue': 'hsl(235, 16%, 14%)',
+        'count-black': 'hsl(234, 17%, 12%)',
+      },
+      fontSize: {
+        'xs': '0.6rem'
       }
     },
   },
