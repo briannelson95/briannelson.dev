@@ -1,4 +1,3 @@
-import { previewData } from "next/headers";
 import { homepage, projectList } from "../../../lib/queries";
 import { client } from "../../../lib/sanity.client";
 import PreviewSuspense from "../../../components/PreviewSuspense"
@@ -16,20 +15,20 @@ export default async function Home() {
     const projects = await client.fetch(projectList)
     const numbers = [1,2,3,4,5,6]
     const tech = data.pageData[0].tech
-    if (previewData()) {
-        return (
-            <PreviewSuspense fallback={(
-                <div role='status'>
-                    <p className="text-center text-lg animate-pulse">
-                        Loading Preview Data...
-                    </p>
-                </div>
-            )}>
-                {/* PreviewProjectList */}
-                <PreviewProjectList query={projectList} />
-            </PreviewSuspense>
-        )
-    }
+    // if (previewData()) {
+    //     return (
+    //         <PreviewSuspense fallback={(
+    //             <div role='status'>
+    //                 <p className="text-center text-lg animate-pulse">
+    //                     Loading Preview Data...
+    //                 </p>
+    //             </div>
+    //         )}>
+    //             {/* PreviewProjectList */}
+    //             <PreviewProjectList query={projectList} />
+    //         </PreviewSuspense>
+    //     )
+    // }
 
     
     // console.log(projects)
