@@ -14,7 +14,7 @@ export const RichTextComponent: any = {
     types: {
         image: ({ value }: any) => {
             return (
-                <div className='relative w-full h-96 m-10 mx-auto'>
+                <div className='relative w-full h-96 mt-6 mx-auto'>
                     <Image 
                         className='object-contain'
                         src={urlFor(value).url()} 
@@ -47,14 +47,15 @@ export const RichTextComponent: any = {
     block: {
         // Ex. 1: customizing common block types
         h1: ({children}: any) => <h1 className="text-2xl">{children}</h1>,
-        h2: ({ children }: any) => <h2 className='text-4xl py-10 font-bold'>{children}</h2>,
-        h3: ({ children }: any) => <h3 className='text-3xl py-10 font-bold'>{children}</h3>,
-        h4: ({ children }: any) => <h4 className='text-2xl py-10 font-bold'>{children}</h4>,
+        h2: ({ children }: any) => <h2 className='text-4xl py-6 font-bold'>{children}</h2>,
+        h3: ({ children }: any) => <h3 className='text-3xl py-6 font-bold'>{children}</h3>,
+        h4: ({ children }: any) => <h4 className='text-2xl py-6 font-bold'>{children}</h4>,
         blockquote: ({ children }: any) => (
             <blockquote className='border-l-slate-500 border-l-4 pl-5 py-5 my-5'>
                 {children}
             </blockquote>
-        )
+        ),
+        normal: ({children}: any) => <p className='my-2'>{children}</p>
     },
     marks: {
         link: ({ children, value }: any) => {

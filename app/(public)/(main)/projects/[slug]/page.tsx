@@ -98,7 +98,7 @@ export default async function ProjectPage({params: {slug}}: Props) {
                     </section>
                 </div>
             </section>
-            <section className="flex flex-col items-center max-w-xl mx-auto">
+            <section className="max-w-xl mx-auto">
                 <PortableText value={project.body} components={RichTextComponent} />
             </section>
         </article>
