@@ -38,7 +38,7 @@ export default async function ProjectPage({params: {slug}}: Props) {
     }
     
     return (
-        <article className="md:px-10 pb-28">
+        <article className="md:px-10 pb-28 max-w-4xl mx-auto">
             <section className="space-y-2 border border-violet-500 text-white">
                 <div className="relative min-h-56 flex flex-col md:flex-row justify-between">
                     <div className="absolute top-0 w-full h-full opacity-10 blur-sm p-10">
@@ -98,7 +98,9 @@ export default async function ProjectPage({params: {slug}}: Props) {
                     </section>
                 </div>
             </section>
-            <PortableText value={project.body} components={RichTextComponent} />
+            <section className="flex flex-col items-center max-w-xl mx-auto">
+                <PortableText value={project.body} components={RichTextComponent} />
+            </section>
         </article>
     )
 }

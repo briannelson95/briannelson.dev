@@ -5,8 +5,8 @@ export function createImprovedAction(originalPublishAction: any) {
         ...originalResult,
         onHandle: () => {
           // Add our custom functionality
-          console.log('Hello world!')
-          alert("Hello world")
+          // console.log('Hello world!')
+          // alert("Hello world")
           // then delegate to original handler
           originalResult.onHandle()
         },

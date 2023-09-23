@@ -49,6 +49,12 @@ export const projects = defineType({
             fieldset: 'title'
         }),
         defineField({
+            name: 'order',
+            title: 'Order',
+            type: 'number',
+            fieldset: 'title',
+        }),
+        defineField({
             name: 'description',
             title: 'Description',
             type: 'text',
