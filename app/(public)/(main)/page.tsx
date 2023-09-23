@@ -7,12 +7,14 @@ import { Metadata } from "next";
 import GradientShadow from "@/components/GradientShadow";
 import Image from "next/image";
 import urlFor from "@/lib/urlFor";
+import Link from "next/link";
+import { ArrowRightIcon } from "@sanity/icons";
 
 export const revalidate = 60;
 
 export default async function Home() {
     const data = await client.fetch(homepage)
-    const projects = await client.fetch(projectList)
+    const projects = data.projects
     const numbers = [1,2,3,4,5,6]
     const tech = data.pageData[0].tech
     // if (previewData()) {
@@ -48,7 +50,12 @@ export default async function Home() {
                     </GradientShadow> 
                 ))}
             </div>
-            <ProjectList projects={projects} />
+            <section className="mb-10">
+                <ProjectList projects={projects} />
+                <div className="w-full flex justify-end">
+                    <Link href={'/projects'} className="underline text-xl flex gap-2 items-center">See all projects <ArrowRightIcon height={30} width={30}/></Link>
+                </div>
+            </section>
         </div>
     )
 }
