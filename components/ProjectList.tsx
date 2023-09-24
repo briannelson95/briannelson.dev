@@ -20,12 +20,12 @@ export default function ProjectList({ projects }: Props) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 gap-y-16 pb-20">
         {projects.map((project, index) => (
-          <div key={index}>
+          <div key={index} className="rounded-b overflow-hidden">
             <ClientSideRoute route={`/projects/${project.slug.current}`}>
               <div className="flex flex-col group cursor-pointer">
                 <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
                   <Image
-                    className="object-cover object-left lg:object-center"
+                    className="rounded-b object-cover object-left lg:object-center"
                     src={urlFor(project.image.image).url()}
                     alt={project.image.alt}
                     fill
