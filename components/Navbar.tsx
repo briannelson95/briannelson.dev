@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { MenuIcon, CloseIcon } from '@sanity/icons';
 import Link from "next/link";
 import Header from "./Header";
+import { usePathname } from "next/navigation";
 
 export default function Navbar({navigation}: any) {
   const handleOpen = () => {
@@ -15,6 +16,8 @@ export default function Navbar({navigation}: any) {
       setOpen(false)
       setIcon(<MenuIcon className='absolute top-2 right-2 md:hidden z-[999]' height={40} width={40} onClick={handleOpen} />)
   }
+
+  const pathname = usePathname();
 
   const [open, setOpen] = useState(false);
   const [icon, setIcon] = useState(<MenuIcon className="absolute top-2 right-2 md:hidden z-[999]" width={40} height={40} onClick={handleOpen} />);
@@ -47,7 +50,9 @@ export default function Navbar({navigation}: any) {
           </div>
         </div>
       </ul>
-      <Header />
+      {!pathname?.includes('resume') && (
+        <Header />
+      )}
     </nav>
   )
 }
