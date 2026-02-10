@@ -13,6 +13,9 @@ const nextConfig = {
   },
   reactStrictMode: true,
   swcMinify: true,
+  compiler: {
+    styledComponents: true,
+  },
   images: {
     domains: ['cdn.sanity.io', 'scontent-bos5-1.cdninstagram.com', 'scontent-lga3-2.cdninstagram.com' ],
   },
