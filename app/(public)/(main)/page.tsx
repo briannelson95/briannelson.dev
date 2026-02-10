@@ -36,7 +36,8 @@ export default async function Home() {
     // console.log(projects)
     return (
         <div>
-            <div className='grid grid-cols-3 gap-4 md:gap-8 md:grid-cols-4'>
+            Hello World
+            {/* <div className='grid grid-cols-3 gap-4 md:gap-8 md:grid-cols-4'>
                 {tech.map((item: any, index: any) => (
                     <GradientShadow key={index}>
                         <Image 
@@ -55,7 +56,7 @@ export default async function Home() {
                 <div className="w-full flex justify-end">
                     <Link href={'/projects'} className="underline text-xl flex gap-2 items-center">See all projects <ArrowRightIcon height={30} width={30}/></Link>
                 </div>
-            </section>
+            </section> */}
         </div>
     )
 }
